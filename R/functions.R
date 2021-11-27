@@ -68,7 +68,7 @@ plot_checkboxes <- function(.df, .var, .match_vec = c(NA), ...,
         # hjust = if_else(prop > 0.1, 1.1, -0.1)
       ),
       alpha = 0.7,
-      size = 6,
+      size = 3.5,
       hjust = -0.1
     ) +
     ggplot2::scale_y_continuous(
@@ -78,7 +78,7 @@ plot_checkboxes <- function(.df, .var, .match_vec = c(NA), ...,
     ggplot2::scale_fill_manual(values = color) +
     ggplot2::labs(x = NULL, y = NULL) +
     ggplot2::coord_flip() +
-    ggplot2::theme_light(base_size = 24) +
+    ggplot2::theme_light(base_size = 12) +
     ggplot2::theme(
       plot.title.position = "plot",
       legend.position = "none",
@@ -136,7 +136,7 @@ plot_radiobutton <- function(.df, .var, .match_vec = c(NA), ...,
         # hjust = if_else(prop > 0.1, 1.1, -0.1)
       ),
       alpha = 0.7,
-      size = 6,
+      size = 3.5,
       hjust = -0.1
     ) +
     ggplot2::scale_y_continuous(
@@ -146,7 +146,7 @@ plot_radiobutton <- function(.df, .var, .match_vec = c(NA), ...,
     ggplot2::scale_fill_manual(values = color) +
     ggplot2::labs(x = NULL, y = NULL) +
     ggplot2::coord_flip() +
-    ggplot2::theme_light(base_size = 24) +
+    ggplot2::theme_light(base_size = 12) +
     ggplot2::theme(
       plot.title.position = "plot",
       legend.position = "none",
