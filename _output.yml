@@ -1,0 +1,8 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">한국 R 컨퍼런스 설문조사 결과</a></li>
+      after: |
+        <li><a href="https://use-r.kr/" target="blank">한국 R 컨퍼런스 2021</a></li>

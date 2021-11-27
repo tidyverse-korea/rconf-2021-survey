@@ -1,0 +1,48 @@
+--- 
+title: "한국 R 컨퍼런스 설문조사 결과"
+author: "강민정, 김기연, 이영록"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+description: |
+  2021년 11월 19일에 개최된 한국 R 컨퍼런스 참석자 분들의 설문조사 결과입니다.
+---
+
+# 개요 {-}
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE
+)
+
+library(tidyverse)
+library(showtext)
+
+showtext_auto(TRUE)
+
+questions_type <- read_csv("data/questions_type.csv")
+questions_text <- deframe(questions_type %>% select(id, text))
+
+df_choices <- read_csv("data/df_choices.csv")
+df_text <- read_csv("data/df_text.csv")
+
+n_response <- nrow(df_choices)
+
+source("R/functions.R")
+```
+
+한국 R 컨퍼런스 2021에 참석하신 분들께 컨퍼런스 경험을 피드백받아, 내년 컨퍼런스가 보다 알차게 구성되도록 하기 위한 설문조사입니다.
+
+설문조사는 11월 19일에서 11월 22일에 걸쳐 실시되었으며, 총 `r scales::comma(n_response)` 분께서 응답해주셨습니다.
+
+설문조사 데이터 분석은 아래와 같이 이메일 및 개인이 드러날 수 있는 정보들을 제외한 뒤 수행되었으며, 동일하게 처리된 데이터는 향후 R 커뮤니티의 발전 논의를 위해 분석 연구 목적으로 공개될 예정입니다.
+
+- 이메일 주소를 데이터에서 제거하였습니다.
+- 참석자 정부 문항에서 응답자 수가 전체 컨퍼런스 참석자 수의 일정 비율에 미치지 못하는 선택 항목들의 경우, 가장 가까운 응답과 함께 묶거나 "기타 응답"으로 통합하였습니다.
+- 각 서술형 문항에 대한 응답의 경우, 다른 서술형 및 선택형 설문 문항에 대한 응답과의 관련성을 보지 못하도록 응답자 아이디를 제외하여 별도로 저장하였습니다.
+
+
+

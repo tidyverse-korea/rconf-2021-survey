@@ -1,0 +1,97 @@
+# 키노트 참석 및 만족도
+
+오전에 있었던 기조연설 세션에 대한 설문입니다.
+
+## `r questions_text["question_17"]`
+
+```{r question_17, fig.height=2.5}
+plot_checkboxes(
+  df_choices,
+  question_17,
+  .color = c("무응답" = "grey80")
+) +
+  labs(title = questions_text["question_17"])
+```
+
+## `r questions_text["question_18"]`
+
+대부분의 응답자가 키노트에 대해 만족하였다고 응답하였습니다.
+
+```{r question_18, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_18,
+  .color = c(
+    "매우 만족" = "steelblue",
+    "만족" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_18"])
+```
+
+## `r questions_text["question_19"]`
+
+전반적으로 키노트 세션의 길이는 적당했던 것으로 나타났습니다.
+
+```{r question_19, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_19,
+  .color = c(
+    "적당했음" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_19"])
+```
+
+## `r questions_text["question_20"]`
+
+키노트 중간 휴식시간은 적당했던 것으로 나타났습니다.
+
+```{r question_20, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_20,
+  .color = c(
+    "적당했음" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_20"])
+```
+
+## `r questions_text["question_21"]`
+
+대부분의 응답에서 키노트의 난이도가 적당했던 것으로 나타났으나, 어려웠다는 응답도 상당히 있었습니다.
+
+```{r question_21, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_21,
+  .color = c(
+    "적당함" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_21"])
+```
+
+## `r questions_text["question_22"]`
+
+"어느 정도 도움이 될 것"이라는 응답이 상당히 우세하였으며, "많은 도움이 될 것"이라는 응답은 1/4가 조금 넘는 수준이었습니다. 응답자의 업무 분야 혹은 기존 지식에 따라 차이가 있을 수 있는 부분일 것이라 생각됩니다.
+
+```{r question_22, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_22,
+  .color = c(
+    "많은 도움이 될 것 같음" = "steelblue",
+    "어느 정도 도움이 될 것 같음" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_22"])
+```
+

@@ -1,0 +1,123 @@
+# 일반 발표세션 참석 및 만족도
+
+오후에 있었던 발표 세션에 대한 설문입니다. 실시간 라이브 트랙과 동영상 녹화 트랙 모두에 해당합니다.
+
+
+## `r questions_text["question_23"]`
+
+실시간 라이브 트랙에서 진행된 발표 세션의 참석자 수가 동영상 녹화 트랙에서 진행된 발표 세션의 참석자 수보다 월등히 많았습니다.
+
+```{r question_23, fig.height=8.5}
+plot_checkboxes(
+  df_choices,
+  question_23,
+  .color = c(
+    "결국 문서는 커뮤니케이션이다 (발표자: 이광춘)" = "steelblue",
+    "사회과학 연구자의 R 동행기 (발표자: 최재성)" = "steelblue",
+    "Infinite Shiny World (발표자: 이준혁)" = "steelblue",
+    "Digital Divide Solution - 오픈 통계 팩키지 (발표자: 윤화영 외)" = "steelblue",
+    "게임 데이터로 인과 추론 분석하기 (발표자: 이은조)" = "steelblue",
+    "실제 기업 서비스에서 R 활용하기 (발표자: 이남신)" = "steelblue",
+    "데이터 옵스의 시작 데이터사이언스캔버스와 그 활용 (발표자: 박성우)" = "steelblue",
+    "Reproducible Research with Table (발표자: 문건웅)" = "darkorchid",
+    "프로덕션 수준의 리포트 자동화 시스템 만들기 (발표자: 이민호/김상현)" = "darkorchid",
+    "데이터사이언스와 오픈소스 (발표자: 이혜선)" = "darkorchid",
+    "납세자의 정서가 조세정책에 미치는 영향 (발표자: 황의찬)" = "darkorchid",
+    "데이터 분석가의 R 패키지 개발 경험기 (발표자: 이영록)" = "darkorchid",
+    "Rpresentation 으로 발표자료 만들기 (발표자: 김진환)" = "darkorchid",
+    "재현가능한 연구를 위한 노력: R과 정치학의 만남 (발표자: 박상훈)" = "darkorchid",
+    "무응답" = "grey80"
+  )
+) +
+  labs(
+    title = questions_text["question_23"],
+    subtitle = "<span style='color:steelblue'>실시간 라이브 트랙</span> vs <span style='color:darkorchid'>동영상 녹화 트랙</span>"
+  ) +
+  theme(
+    plot.subtitle = ggtext::element_markdown()
+  )
+```
+
+## `r questions_text["question_24"]`
+
+대부분의 응답자가 발표 세션에 대해 만족하였다고 응답하였으나, 키노트에 대한 만족도와 비교해보면 "매우 만족"이라고 응답 비율이 12% 낮고 (36% vs 24%), "보통"이라고 응답한 비율이 10% 높게 나타나 (6% vs 16%), 키노트에 비해서는 만족도가 떨어졌던 것으로 나타났습니다.
+
+```{r question_24, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_24,
+  .color = c(
+    "매우 만족" = "steelblue",
+    "만족" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_24"])
+```
+
+## `r questions_text["question_25"]`
+
+전반적으로 발표 세션의 길이는 적당했던 것으로 응답되었으나, 짧았다는 응답도 상당히 있었습니다.
+
+```{r question_25, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_25,
+  .color = c(
+    "적당했음" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_25"])
+```
+
+## `r questions_text["question_26"]`
+
+전반적으로 휴식시간의 길이는 적당했던 것으로 나타났습니다.
+
+```{r question_26, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_26,
+  .color = c(
+    "적당했음" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_26"])
+```
+
+## `r questions_text["question_27"]`
+
+대부분의 응답에서 난이도가 적당했던 것으로 나타났으나, 어려웠다는 응답도 쉬웠다는 응답에 비해 상당히 높았습니다.
+
+```{r question_27, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_27,
+  .color = c(
+   "적당함" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_27"])
+```
+
+## `r questions_text["question_28"]`
+
+대부분 도움이 될 것이라는 응답이었으며, "많은 도움이 될 것"이라는 응답은 40%로, 키노트에서의 28%보다 상당히 높았습니다. 발표 주제가 다양했던 점이 긍정적으로 작용했을 수 있습니다.
+
+
+```{r question_28, fig.height=3}
+plot_radiobutton(
+  df_choices,
+  question_28,
+  .color = c(
+    "많은 도움이 될 것 같음" = "steelblue",
+    "어느 정도 도움이 될 것 같음" = "steelblue",
+    "무응답" = "grey80"
+  )
+) +
+  labs(title = questions_text["question_28"])
+```
+
