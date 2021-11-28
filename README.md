@@ -12,7 +12,7 @@
 
 # 설문조사 양식
 
-- ![구글 폼 &rarr; PDF](data/한국 R 컨퍼런스 2021 참석자 설문조사 문항.pdf)
+- [구글 폼 &rarr; PDF](https://github.com/tidyverse-korea/rconf-2021-survey/blob/main/data/%ED%95%9C%EA%B5%AD%20R%20%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%202021%20%EC%B0%B8%EC%84%9D%EC%9E%90%20%EC%84%A4%EB%AC%B8%EC%A1%B0%EC%82%AC%20%EB%AC%B8%ED%95%AD.pdf)
 
 # 설문조사 분석에 참여해주신 분
 
